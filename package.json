@@ -1,0 +1,14 @@
+{
+  "name": "bot-template",
+  "version": "0.0.1",
+  "description": "A boilerplate bot by @WilsontheWolf and @Chicken",
+  "main": "index.js",
+  "repository": "https://github.com/WilsontheWolf/bot-template",
+  "author": "WilsontheWolf",
+  "license": "MIT",
+  "dependencies": {
+    "@josh-providers/sqlite": "^1.0.13",
+    "discord.js": "^12.3.1",
+    "josh": "^0.1.0"
+  }
+}
