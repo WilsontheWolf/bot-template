@@ -1,11 +1,12 @@
 module.exports = {
 	name: 'restore',
-	usages: `[db's]`,
+	usage: `[db's]`,
 	guildOnly: false,
 	enabled: true,
 	level: 9,
 	aliases: [],
-	category: 'System'
+	category: 'System',
+	description: 'Restore the databases from the backup.'
 }
 module.exports.run = async (client, message, args, level) => {
 	// Check if the user specifies valid backups

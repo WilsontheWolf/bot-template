@@ -1,11 +1,12 @@
 module.exports = {
 	name: 'backup',
-	usages: `[db's]`,
+	usage: `[db's]`,
 	guildOnly: false,
 	enabled: true,
 	level: 9,
 	aliases: [],
-	category: 'System'
+	category: 'System',
+	description: 'Backup the databases.'
 }
 module.exports.run = async (client, message, args, level) => {
 	// Check if the user specifies valid backups

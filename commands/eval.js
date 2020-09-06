@@ -1,11 +1,12 @@
 module.exports = {
 	name: 'eval',
-	usages: `[code]`,
+	usage: `[code]`,
 	guildOnly: false,
 	enabled: true,
 	level: 9,
 	aliases: [],
-	category: 'System'
+	category: 'System',
+	description: 'Run JS code.'
 }
 const Discord = require('discord.js')
 module.exports.run = async (client, message, args, level) => {

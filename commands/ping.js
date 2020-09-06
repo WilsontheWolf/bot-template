@@ -1,11 +1,12 @@
 module.exports = {
 	name: 'ping',
-	usages: ``,
+	usage: ``,
 	guildOnly: false,
 	enabled: true,
 	level: 0,
 	aliases: [],
-	category: 'System'
+	category: 'System',
+	description: 'Pong!'
 }
 module.exports.run = async (client, message, args, level) => {
 	let msg = await message.channel.send('Pong!');

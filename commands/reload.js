@@ -1,11 +1,12 @@
 module.exports = {
 	name: 'reload',
-	usages: `[commands]`,
+	usage: `[commands]`,
 	guildOnly: false,
 	enabled: true,
 	level: 9,
 	aliases: ['refresh'],
-	category: 'System'
+	category: 'System',
+	description: 'Reload a command.'
 }
 module.exports.run = async (client, message, args, level) => {
 	if (!args[0]) {

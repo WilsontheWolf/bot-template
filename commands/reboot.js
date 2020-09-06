@@ -1,11 +1,12 @@
 module.exports = {
 	name: 'reboot',
-	usages: ``,
+	usage: ``,
 	guildOnly: false,
 	enabled: true,
 	level: 9,
 	aliases: ['restart', 'shutdown'],
-	category: 'System'
+	category: 'System',
+	description: 'Shut down the bot.'
 }
 module.exports.run = async (client, message, args, level) => {
 	await message.reply('rebooting...')
