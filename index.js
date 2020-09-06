@@ -20,22 +20,30 @@ client.settings = new Josh({
 	provider,
 	autoEnsure: client.config.settings
 });
+client.internal = new Josh({
+	name: "internal",
+	provider,
+});
 
 (async () => {
 	let commands = await fs.readdir('./commands')
 	console.log(`Loading ${commands.length} commands.`)
+	let done = 0
 	commands.forEach(cmd => {
 		if (!cmd.endsWith('.js')) return;
 		let r = client.loadCommand(cmd)
-		if (!r) console.log(`Successfully loaded ${cmd}!`)
+		if (!r) done++
 	})
+	console.log(`Successfully loaded ${done}/${commands.length} command${commands.length !== 1 ? 's' : ''}.`)
 	let events = await fs.readdir('./events')
 	console.log(`Loading ${events.length} events.`)
+	done = 0
 	events.forEach(evt => {
 		if (!evt.endsWith('.js')) return;
 
 		let r = client.loadEvent(evt)
-		if (!r) console.log(`Successfully loaded ${evt}!`)
+		if (!r) done++
 	})
+	console.log(`Successfully loaded ${done}/${events.length} event${events.length !== 1 ? 's' : ''}.`)
 	client.login(client.config.token)
 })()

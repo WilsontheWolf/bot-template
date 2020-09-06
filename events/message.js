@@ -22,20 +22,24 @@ module.exports = async (client, message) => {
 		return message.channel.send("This command is unavailable via private message. Please run this command in a guild.");
 
 	//todo: Setup perms stuff
+	const level =  message.level = await client.getLevel(message)
 
-	message.flags = [];
+	if(cmd.level > level) return message.reply(`You don't have the permissions to run this command.
+You need to be a ${client.config.perms.find(p => p.level === cmd.level).name} (${cmd.level})
+You are a ${client.config.perms.find(p => p.level === level).name} (${level})`)
+	message.options = [];
 	while (args[0] && args[0][0] === "-") {
-		message.flags.push(args.shift().slice(1));
+		message.options.push(args.shift().slice(1));
 	}
 
 	try {
 		console.log(`${message.author.tag} ran command ${command}.`)
-		await cmd.run(client, message, args);
+		await cmd.run(client, message, args, level);
 	} catch (e) {
 		console.error(`Error running command!`)
 		console.error(e)
 		message.reply(`There was an unexpected error running that command.
-if you get support on this error please provide this info: ${'```'}
+If you get support on this error please provide this info: ${'```'}
 ${e}
 ${'```'}`)
 	}

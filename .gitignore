@@ -108,3 +108,4 @@ config.js
 
 # Data
 data/
+backups/
