@@ -6,7 +6,8 @@ module.exports = {
 	level: 9,
 	aliases: ['refresh'],
 	category: 'System',
-	description: 'Reload a command.'
+	description: 'Reload a command.',
+	moreHelp: null
 }
 module.exports.run = async (client, message, args, level) => {
 	if (!args[0]) {

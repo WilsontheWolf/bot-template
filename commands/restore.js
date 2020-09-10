@@ -6,7 +6,8 @@ module.exports = {
 	level: 9,
 	aliases: [],
 	category: 'System',
-	description: 'Restore the databases from the backup.'
+	description: 'Restore the databases from the backup.',
+	moreHelp: null
 }
 module.exports.run = async (client, message, args, level) => {
 	// Check if the user specifies valid backups

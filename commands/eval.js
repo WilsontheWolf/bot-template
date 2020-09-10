@@ -6,7 +6,8 @@ module.exports = {
 	level: 9,
 	aliases: [],
 	category: 'System',
-	description: 'Run JS code.'
+	description: 'Run JS code.',
+	moreHelp: null
 }
 const Discord = require('discord.js')
 module.exports.run = async (client, message, args, level) => {

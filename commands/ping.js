@@ -6,7 +6,8 @@ module.exports = {
 	level: 0,
 	aliases: [],
 	category: 'System',
-	description: 'Pong!'
+	description: 'Pong!',
+	moreHelp: null
 }
 module.exports.run = async (client, message, args, level) => {
 	let msg = await message.channel.send('Pong!');

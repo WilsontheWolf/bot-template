@@ -17,8 +17,7 @@ client.aliases = new Discord.Collection();
 // db stuff
 client.settings = new Josh({
 	name: "settings",
-	provider,
-	autoEnsure: client.config.settings
+	provider
 });
 client.internal = new Josh({
 	name: "internal",

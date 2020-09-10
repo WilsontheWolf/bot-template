@@ -16,10 +16,10 @@
     combined-stream "^1.0.8"
     mime-types "^2.1.12"
 
-"@josh-providers/sqlite@^1.0.13":
-  version "1.0.13"
-  resolved "https://registry.yarnpkg.com/@josh-providers/sqlite/-/sqlite-1.0.13.tgz#355e133bb34792dc40ef66d6334c137f70b0aa47"
-  integrity sha512-5nT0Ubfm1Tor9k4WOFDBra0JwpWM/YC8peF8sg4weq1N3osQYxDD3imPTKm2Rs7tahDj/EvKs5BuKYJYA8vutA==
+"@josh-providers/sqlite@^1.0.14":
+  version "1.0.14"
+  resolved "https://registry.yarnpkg.com/@josh-providers/sqlite/-/sqlite-1.0.14.tgz#d7d3821896dd2d537fd244d8ab842fe4e6160060"
+  integrity sha512-zr+fSQWxfsTP8Rq5eQIWi3eqtgzJqFMeVRtTWN+yLeaIQlV+riq6Uxed48QBi1dNufjoEMYW5xvMLQhm/366nA==
   dependencies:
     better-sqlite3 "^7.1.0"
     lodash "^4.17.15"
@@ -260,10 +260,10 @@ isarray@~1.0.0:
   resolved "https://registry.yarnpkg.com/isarray/-/isarray-1.0.0.tgz#bb935d48582cba168c06834957a54a3e07124f11"
   integrity sha1-u5NdSFgsuhaMBoNJV6VKPgcSTxE=
 
-josh@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/josh/-/josh-0.1.0.tgz#76e29d8410af75dced059d1eca78435b4590d49d"
-  integrity sha512-1253Wcz91xe6mFtQ4j3Tq/TOJC53v/6fkrWPrnvxQJZFx0oWWfb+hWGk3L5LJOu0R6GmbVbVDm3+nbLN614vxA==
+josh@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/josh/-/josh-0.1.1.tgz#55ac1e7c0e1e0e400c0cd5117bd5821fa7c0b635"
+  integrity sha512-wCiG+S9bObPyKTHYDnUTxPI5Nq5nvTpPd6IuJYqVGrA423x9CS/riZsDvxicxdqzJBFLOWSXRfLiIdfsctiCxw==
   dependencies:
     lodash "^4.17.20"
 
