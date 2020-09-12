@@ -260,10 +260,9 @@ isarray@~1.0.0:
   resolved "https://registry.yarnpkg.com/isarray/-/isarray-1.0.0.tgz#bb935d48582cba168c06834957a54a3e07124f11"
   integrity sha1-u5NdSFgsuhaMBoNJV6VKPgcSTxE=
 
-josh@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/josh/-/josh-0.1.1.tgz#55ac1e7c0e1e0e400c0cd5117bd5821fa7c0b635"
-  integrity sha512-wCiG+S9bObPyKTHYDnUTxPI5Nq5nvTpPd6IuJYqVGrA423x9CS/riZsDvxicxdqzJBFLOWSXRfLiIdfsctiCxw==
+josh@wilsonthewolf/josh#serializer-key:
+  version "0.1.0"
+  resolved "https://codeload.github.com/wilsonthewolf/josh/tar.gz/5400ade3572704b02013ee21a183e36ee2d4bbeb"
   dependencies:
     lodash "^4.17.20"
 

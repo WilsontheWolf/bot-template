@@ -43,7 +43,7 @@ ${cmd.description} ${cmd.moreHelp ? '\n' + cmd.moreHelp : ''}`)
 			.addField('Category:', cmd.category, true)
 			.addField('Aliases:', cmd.aliases[0] ? `\`${cmd.aliases.join('` `')}\`` : 'none', true)
 			.addField('Guild Only:', cmd.guildOnly, true)
-			.setColor('RANDOM')
+			.setColor('PURPLE')
 			message.channel.send(embed)
 	}
 }

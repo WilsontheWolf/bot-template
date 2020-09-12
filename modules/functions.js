@@ -61,4 +61,92 @@ module.exports = (client) => {
 		return level
 	}
 
+
+	client.fetchUser = async (query) => {
+		const mention = new RegExp(/<@!?\d+>/g);
+		const beg = new RegExp(/<@!?/g);
+		let user;
+		if (query.match(mention)) {
+			user = query.match(mention)[0];
+			user = user.slice(query.match(beg)[0].length, user.length - 1);
+			let result = undefined
+			try {
+				result = await client.users.fetch(user);
+			} catch (e) { }
+			return result
+		}
+		else {
+			let result = undefined
+			try {
+				result = await client.users.fetch(query);
+			} catch (e) { }
+			return result;
+		}
+	}
+
+	client.searchUser = async (search, msg) => {
+		let result = await client.fetchUser(search);
+		if (result && msg.guild) {
+			try {
+				result = await msg.guild.members.fetch(query);
+			} catch (e) { }
+		}
+		if (result) return result;
+		if (msg.guild) if (
+			msg.guild.members.cache
+				.filter(user =>
+					user.displayName.toLowerCase().startsWith(search.toLowerCase())
+				)
+				.first()
+		) {
+			let users = msg.guild.members.cache
+				.filter(user =>
+					user.displayName.toLowerCase().startsWith(search.toLowerCase())
+				)
+				.array();
+			if (users.length == 1) return users[0].user;
+			let question = "";
+			console.log(users.length);
+			for (var i = 0; i != users.length && i != 10; i++) {
+				question =
+					question +
+					`[${i + 1}] ${users[i].displayName} (${users[i].user.tag})
+`;
+			}
+			let num = await client.awaitReply(
+				msg,
+				`Please choose one of these:
+${question}`
+			);
+			return users[parseInt(num) - 1].user;
+		}
+		if (
+			client.users.cache
+				.filter(user =>
+					user.username.toLowerCase().startsWith(search.toLowerCase())
+				)
+				.first()
+		) {
+			let users = client.users.cache
+				.filter(user =>
+					user.username.toLowerCase().startsWith(search.toLowerCase())
+				)
+				.array();
+			if (users.length == 1) return users[0];
+			let question = "";
+			console.log(users.length);
+			for (var i = 0; i != users.length && i != 10; i++) {
+				question =
+					question +
+					`[${i + 1}] ${users[i].tag}
+`;
+			}
+			let num = await client.awaitReply(
+				msg,
+				`Please choose one of these:
+${question}`
+			);
+			return users[parseInt(num) - 1];
+		}
+	};
 }
