@@ -5,7 +5,7 @@ module.exports = {
     enabled: true,
     level: 0,
     aliases: [],
-    category: 'Misc',
+    category: 'Info',
     description: 'Display command info.',
     moreHelp: null
 };

@@ -6,7 +6,8 @@ module.exports = {
     level: 0,
     aliases: [],
     category: 'Misc',
-    description: ''
+    description: '',
+    moreHelp: null
 };
 // eslint-disable-next-line no-unused-vars
 module.exports.run = async (client, message, args, level) => {
