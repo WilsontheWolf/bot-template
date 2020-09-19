@@ -45,10 +45,9 @@ module.exports.run = async (client, message, args, level) => {
         if (error) {
             let line = code.split('\n')[error.line - 1];
             let length = line.slice(error.column - 1).match(/\w+/i)[0].length;
-            response = `${error.message} 
-Line: ${error.line}, Column: ${error.column}
-${line}
-${' '.repeat(error.column - 1)}${'^'.repeat(length)}`;
+            response = `${line}
+${' '.repeat(error.column - 1)}${'^'.repeat(length)}
+[${error.line}:${error.column}] ${error.message} `;
         }
 
     }
