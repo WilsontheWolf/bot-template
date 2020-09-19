@@ -7,10 +7,10 @@
   "author": "WilsontheWolf",
   "license": "MIT",
   "dependencies": {
-    "@josh-providers/sqlite": "^1.0.14",
+    "@josh-providers/sqlite": "^1.0.15",
     "discord.js": "^12.3.1",
     "dotenv": "^8.2.0",
-    "josh": "wilsonthewolf/josh#serializer-key"
+    "josh": "^0.2.0"
   },
   "devDependencies": {
     "eslint": "^7.9.0"

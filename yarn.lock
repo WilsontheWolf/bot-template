@@ -53,13 +53,15 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@josh-providers/sqlite@^1.0.14":
-  version "1.0.14"
-  resolved "https://registry.yarnpkg.com/@josh-providers/sqlite/-/sqlite-1.0.14.tgz#d7d3821896dd2d537fd244d8ab842fe4e6160060"
-  integrity sha512-zr+fSQWxfsTP8Rq5eQIWi3eqtgzJqFMeVRtTWN+yLeaIQlV+riq6Uxed48QBi1dNufjoEMYW5xvMLQhm/366nA==
+"@josh-providers/sqlite@^1.0.15":
+  version "1.0.15"
+  resolved "https://registry.yarnpkg.com/@josh-providers/sqlite/-/sqlite-1.0.15.tgz#a1a6c768d5dd13a9c919e993f8602c2ca9871b03"
+  integrity sha512-9bxE7jA0cPScn6sp01KsvlHP6w1SQhOh3+dMs2iJQw37PMUsETDD+9yn/KD76WZnzWNer28lpsuYilz0LlHbCQ==
   dependencies:
     better-sqlite3 "^7.1.0"
     lodash "^4.17.15"
+    on-change "^2.1.2"
+    serialize-javascript "^5.0.1"
 
 "@types/color-name@^1.1.1":
   version "1.1.1"
@@ -704,9 +706,10 @@ isexe@^2.0.0:
   resolved "https://registry.yarnpkg.com/isexe/-/isexe-2.0.0.tgz#e8fbf374dc556ff8947a10dcb0572d633f2cfa10"
   integrity sha1-6PvzdNxVb/iUehDcsFctYz8s+hA=
 
-josh@wilsonthewolf/josh#serializer-key:
-  version "0.1.0"
-  resolved "https://codeload.github.com/wilsonthewolf/josh/tar.gz/5400ade3572704b02013ee21a183e36ee2d4bbeb"
+josh@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/josh/-/josh-0.2.0.tgz#6f4f5b7dde0fa8e3c08cce6ee87015c244464817"
+  integrity sha512-ja/z77B14j2ndjLlAfwcxT1reZ4Va581yQULxR8E/OQDG6ts6ZoqDPssQ+ArRu9ncQL5VFXBwQMcDU2TcFaQog==
   dependencies:
     lodash "^4.17.20"
 
@@ -854,6 +857,11 @@ object-assign@^4.1.0:
   resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
   integrity sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM=
 
+on-change@^2.1.2:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/on-change/-/on-change-2.1.2.tgz#4dea2c481b97302ae10f27ab02bd46f7f6284c71"
+  integrity sha512-NrqTIHeY9EjxaQ7urD/bPQNK0QCoQIwBfApgscsXtOWeZlNgr9JHhEe9HfWSVmPei8RWqxlevMejmQaIIhlfOw==
+
 once@^1.3.0, once@^1.3.1, once@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/once/-/once-1.4.0.tgz#583b1aa775961d4b113ac17d9c50baef9dd76bd1"
@@ -944,6 +952,13 @@ punycode@^2.1.0:
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.1.1.tgz#b58b010ac40c22c5657616c8d2c2c02c7bf479ec"
   integrity sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==
 
+randombytes@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/randombytes/-/randombytes-2.1.0.tgz#df6f84372f0270dc65cdf6291349ab7a473d4f2a"
+  integrity sha512-vYl3iOX+4CKUWuxGi9Ukhie6fsqXqS9FE2Zaic4tNFD2N2QQaXOMFbuKK4QmDHC0JO6B1Zp41J0LpT0oR68amQ==
+  dependencies:
+    safe-buffer "^5.1.0"
+
 rc@^1.2.7:
   version "1.2.8"
   resolved "https://registry.yarnpkg.com/rc/-/rc-1.2.8.tgz#cd924bf5200a075b83c188cd6b9e211b7fc0d3ed"
@@ -993,7 +1008,7 @@ rimraf@2.6.3:
   dependencies:
     glob "^7.1.3"
 
-safe-buffer@^5.0.1, safe-buffer@^5.1.2, safe-buffer@~5.2.0:
+safe-buffer@^5.0.1, safe-buffer@^5.1.0, safe-buffer@^5.1.2, safe-buffer@~5.2.0:
   version "5.2.1"
   resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.2.1.tgz#1eaf9fa9bdb1fdd4ec75f58f9cdb4e6b7827eec6"
   integrity sha512-rp3So07KcdmmKbGvgaNxQSJr7bGVSVk5S9Eq1F+ppbRo70+YeaDxkw5Dd8NPN+GD6bjnYm2VuPuCXmpuYvmCXQ==
@@ -1012,6 +1027,13 @@ semver@^7.2.1:
   version "7.3.2"
   resolved "https://registry.yarnpkg.com/semver/-/semver-7.3.2.tgz#604962b052b81ed0786aae84389ffba70ffd3938"
   integrity sha512-OrOb32TeeambH6UrhtShmF7CRDqhL6/5XpPNp2DuRH6+9QLw/orhp72j87v8Qa1ScDkvrrBNpZcDejAirJmfXQ==
+
+serialize-javascript@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/serialize-javascript/-/serialize-javascript-5.0.1.tgz#7886ec848049a462467a97d3d918ebb2aaf934f4"
+  integrity sha512-SaaNal9imEO737H2c05Og0/8LUXG7EnsZyMa8MzkmuHoELfT6txuj0cMqRj6zfPKnmQ1yasR4PCJc8x+M4JSPA==
+  dependencies:
+    randombytes "^2.1.0"
 
 set-blocking@~2.0.0:
   version "2.0.0"
